@@ -1,0 +1,662 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML5 Template, Themeforest, agency, blog, business, clean, corporate, creative, modern, one page, photography, portfolio">
+    <meta name="description" content="Discover Oscarthemes - Business HTML5 Template, responsive Bootstrap templates, & HTML templates">
+    <meta name="theme-color" content="#4b6fff">
+    <title>全国受教育程度与教学资源可视化</title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="static/css/animate.css" rel="stylesheet">
+    <!-- Flat Icon CSS -->
+    <link href="static/css/svg.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link href="static/css/slick.css" rel="stylesheet">
+    <!-- Responsive Menu css -->
+    <link rel="stylesheet" href="static/css/responsivemenu.css">
+    <!-- Typography CSS -->
+    <link href="static/css/typography.css" rel="stylesheet">
+    <!-- Widget Css -->
+    <link href="static/css/widget.css" rel="stylesheet">
+    <!-- Short Code CSS -->
+    <link href="static/css/shortcode.css" rel="stylesheet">
+    <!-- Custom Style CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <!-- Color CSS -->
+    <link href="static/css/color.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="static/css/responsive.css" rel="stylesheet">
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="static/js/echarts.js"></script>
+</head>
+
+<body class="grad-version" id="home">
+    <!-- LOADER -->
+    <div id="loader-overflow">
+        <div id="loader3" class="loader-cont">Please enable JS</div>
+    </div>
+    <div class="main-wrapper">
+        <!-- Header Start -->
+        <header id="header" class="oscar-header-4">
+            <!-- Navigation Outer Wrap Start -->
+            <div class="nav-outer sticky-header">
+                <div class="container">
+                    <div class="pull-right menu-holder">
+                        <div class="mobile-menu"></div>
+                        <div id="opg-nav" class="main-menu navigation">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="#home">主页</a></li>
+                                    <li><a href="#featured">各级各类师生概况</a></li>
+                                    <li><a href="#testimonial">分地区各级学校情况</a></li>
+                                    <li><a href="#pricing">教育经费情况</a></li>
+                                    <li><a href="#blog">教育制度执行情况</a></li>
+                                    <li><a href="#contact">社会评论</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Navigation Outer Wrap End -->
+        </header>
+        <!-- /Header End -->
+
+        <div class="main-banner">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-md-6 col-sm-6">
+                        <div class="banner-caption-wrap">
+                            <h1 class="banner-title">全国受教育程度<span>与教学资源可视化</span></h1>
+                            <p>教育兴则国家兴，教育强则国家强。</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class="col-md-6 col-sm-6">
+                        <div class="banner-thumb">
+                            <img src="static/picture/undraw_real_time_analytics_re_yliv.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- oscar Contant Wrapper Start-->
+        <div id="main-contant" class="main-contant">
+            <!-- Featured Section Start -->
+            <section class="">
+                <!-- Featured Item Section Start -->
+                <div class="featured-slider-section">
+                    <div class="container">
+
+                    </div>
+                </div>
+                <!-- Featured Item Section End -->
+            </section>
+            <!-- Featured Section End -->
+
+
+            <!-- Features Section Start -->
+            <section id="featured" class="gray-bg">
+                <div class="container">
+                    <!-- Section Heading Start -->
+                    <div class="section-heading-2 text-center mb-61">
+                        <h2 class="title">各级学校师生比(教师人数=1)</h2>
+                        <p>点击下方选项可隐藏该类数据</p>
+                    </div>
+                    <!-- Section Heading End -->
+
+                    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                    <div id="ratio-year" style="width: 100%;height:600px;margin-top:120px"></div>
+                    <script type="text/javascript">
+                        var myChart = echarts.init(document.getElementById('ratio-year'));
+                        var option = {
+                            legend: {},
+                            tooltip: {
+                                //trigger: 'axis',
+                                showContent: false,
+                            },
+                            dataset: {
+                                source: [
+                                    ['product', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+                                    ['普通小学', 19.43, 19.17, 18.82, 18.38, 17.88, 17.71, 17.71, 17.36, 16.76, 16.78, 17.05, 17.12, 16.98, 16.97, 16.85, 16.67],
+                                    ['初中', 17.8, 17.15, 16.52, 16.07, 15.47, 14.98, 14.38, 13.59, 12.76, 12.57, 12.41, 12.41, 12.52, 12.79, 12.88, 12.73],
+                                    ['普通高中', 18.54, 18.13, 17.48, 16.78, 16.3, 15.99, 15.77, 15.47, 14.95, 14.44, 14.01, 13.65, 13.39, 13.1, 12.99, 12.9],
+                                    ['中等职业学校', 21.33, 22.65, 23.13, 23.32, 25.27, 25.69, 25.01, 24.19, 22.97, 21.34, 20.47, 19.84, 18.98, 19.1, 18.93, 19.54],
+                                    ['普通高校', 16.85, 17.93, 17.28, 17.23, 17.27, 17.33, 17.42, 17.52, 17.53, 17.68, 17.73, 17.07, 17.52, 17.56, 17.95, 18.37]
+                                ]
+                            },
+                            xAxis: {
+                                type: 'category',
+                                triggerEvent: true,
+                                //axisPointer: {show:true}
+                            },
+                            yAxis: {
+                                scale: true
+                            },
+                            grid: {
+                                top: '55%'
+                            },
+                            series: [{
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                symbolSize: 10
+                            }, {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                symbolSize: 10
+                            }, {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                symbolSize: 10
+                            }, {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                symbolSize: 10
+                            }, {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                symbolSize: 10
+                            }, {
+                                type: 'pie',
+                                id: 'pie',
+                                radius: '30%',
+                                center: ['50%', '25%'],
+                                label: {
+                                    formatter: '{b}: {@[2005]} ({d})'
+                                },
+                                encode: {
+                                    itemName: 'product',
+                                    value: '2005',
+                                    tooltip: '2005'
+                                }
+                            }]
+                        };
+
+                        setTimeout(function() {
+                            myChart.on('mouseover', function(params) {
+
+                                if (params.componentType == "xAxis") {
+                                    let xAxisInfo = params.value;
+                                    myChart.setOption({
+                                        series: {
+                                            id: 'pie',
+                                            label: {
+                                                formatter: '{b}: {@[' + xAxisInfo + ']} ({d}%)'
+                                            },
+                                            encode: {
+                                                value: xAxisInfo,
+                                                tooltip: xAxisInfo
+                                            }
+                                        }
+                                    });
+                                }
+                                if (params.componentType == "series" && params.seriesType == 'line') {
+                                    let xAxisInfo = params.value[0];
+                                    myChart.setOption({
+                                        series: {
+                                            id: 'pie',
+                                            label: {
+                                                formatter: '{b}: {@[' + xAxisInfo + ']} ({d}%)'
+                                            },
+                                            encode: {
+                                                value: xAxisInfo,
+                                                tooltip: xAxisInfo
+                                            }
+                                        }
+                                    });
+                                }
+                                setTimeout(function() {
+                                    myChart.dispatchAction({
+                                        type: 'highlight',
+                                        seriesIndex: 4,
+                                        dataIndex: params.seriesIndex
+                                    });
+                                }, 300);
+                            });
+
+                            myChart.on('mouseout', function(params) {
+                                myChart.dispatchAction({
+                                    type: 'downplay',
+                                    seriesIndex: 4,
+                                    dataIndex: params.seriesIndex
+                                });
+                            });
+                        }, 0);
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+
+                    <div class="blog-thumb">
+                        <div class="text">
+                            <h5 class="title">从纵向比较来看，我国普通高中和初中的师生比显著下降</h5>
+                            <p>
+                                据教育部，中国每1名小学教师对应的学生从2005年的近20名下降到2019年的17名。超过56人的大班在小学占比为3.9%，初中为4.3%。城市中职在校生1576.5万人，长高中阶段在校生的40%，但教师数量仅有不到85万人，平均每名教师对应近19名学生，远高于普通高中1:13的师生比两会期间，全国政协常委兼副秘书长、民进中央副主席朱永新建议，适当增加教师编制，加强教师培训。建议调整中小学教师编制标准，提高中小学师生比，适当增加教师编制总量。同时，针对“双减”政策对教师提出的新要求，对在职教师开展针对性的培训。</p>
+                        </div>
+                    </div>
+
+                    <div class="section-heading-2 text-center mb-61">
+                        <h2 class="title">各级学校师生比(教师人数=1)</h2>
+                        <p>点击下方选项可隐藏该类数据</p>
+                    </div>
+                    <!-- Section Heading End -->
+
+                    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                    <div id="ratio-area" style="width: 100%;height:1000px;margin-top:20px"></div>
+                    <script type="text/javascript">
+                        var myChart = echarts.init(document.getElementById('ratio-area'));
+                        option = {
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {
+                                    // Use axis to trigger tooltip
+                                    type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                                }
+                            },
+                            legend: {},
+                            grid: {
+                                left: '3%',
+                                right: '4%',
+                                bottom: '3%',
+                                containLabel: true
+                            },
+                            xAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    show: false
+                                }
+                            },
+                            yAxis: {
+                                inverse: true,
+                                data: ["北京", "天津", "河北", "内蒙古", "辽宁", "吉林", "黑龙江", "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北", "湖南", "广东", "海南", "重庆", "四川", "贵州", "云南", "西藏", "陕西", "甘肃", "青海", "宁夏", "新疆"],
+                                type: 'category'
+                            },
+                            series: [{
+                                name: '普通小学',
+                                type: 'bar',
+                                stack: 'total',
+                                barWidth: '30%',
+                                label: {
+                                    show: true
+                                },
+                                emphasis: {
+                                    focus: 'series'
+                                },
+                                animationDelay: function(idx) {
+                                    return idx * 50 + 1000;
+                                },
+                                data: [14.01, 15.38, 17.07, 13.98, 13.13, 14.28, 11.2812, 14.01, 16.79, 16.79, 17.98, 18.82, 16.77, 16.36, 17.42, 18.15, 17.81, 18.4318, 15.87, 15.5, 16.03, 18.48, 16.4, 14.41, 16.33, 13.32, 17.63, 17.52, 16.34]
+                            }, {
+                                name: '初中',
+                                type: 'bar',
+                                stack: 'total',
+                                label: {
+                                    show: true
+                                },
+                                emphasis: {
+                                    focus: 'series'
+                                },
+                                animationDelay: function(idx) {
+                                    return idx * 50 + 1000;
+                                },
+                                data: [8.68, 11.02, 13.72, 10.27, 10.87, 10.14, 9.27, 9.96, 10.47, 11.96, 12.29, 13.53, 13.46, 15.15, 12.24, 13.87, 12.65, 13.33, 13.47, 14.83, 13.63, 13.77, 12.81, 13.8, 13.09, 11.55, 11.55, 10.76, 13.34, 14.15, 11.61]
+                            }, {
+                                name: '普通高中',
+                                type: 'bar',
+                                stack: 'total',
+                                label: {
+                                    show: true
+                                },
+                                emphasis: {
+                                    focus: 'series'
+                                },
+                                animationDelay: function(idx) {
+                                    return idx * 50 + 1000;
+                                },
+                                data: [7.62, 10.04, 13.18, 10.17, 10.82, 11.33, 13.12, 12.92, 8.74, 10.96, 10.98, 13.82, 12.59, 16.94, 11.81, 15.18, 13.02, 14.16, 12.54, 16.21, 12.71, 15.34, 13.68, 14.12, 13.31, 12.34, 11.44, 11.21, 12.45, 13.84, 11.76]
+                            }, {
+                                name: '中等职业学校',
+                                type: 'bar',
+                                stack: 'total',
+                                label: {
+                                    show: true
+                                },
+                                emphasis: {
+                                    focus: 'series'
+                                },
+                                animationDelay: function(idx) {
+                                    return idx * 50 + 1000;
+                                },
+                                data: [8.04, 14.2, 16.65, 12.78, 12.96, 13.58, 8.89, 13.25, 13.11, 14.35, 15.59, 27.44, 21.06, 28.61, 15.81, 24.94, 20.09, 21.09, 19.77, 34.05, 30.36, 22.21, 21.56, 24.27, 28.71, 12.63, 18.42, 14.22, 37.34, 24.94, 22.53]
+                            }, {
+                                name: '普通高校',
+                                type: 'bar',
+                                stack: 'total',
+                                label: {
+                                    show: true
+                                },
+                                emphasis: {
+                                    focus: 'series'
+                                },
+                                animationDelay: function(idx) {
+                                    return idx * 50 + 1000;
+                                },
+                                data: [16.47, 18.69, 17.8, 17.93, 17.61, 19.63, 19.36, 16.03, 16.25, 16.07, 15.73, 20.01, 17.11, 18.78, 19.1, 18.25, 18.81, 18.17, 18.88, 19.87, 18.6, 18.15, 19.85, 20.62, 22.7, 15.96, 19.16, 19.15, 17.37, 17.62, 19.94]
+                            }],
+                            animationEasing: 'elasticOut',
+                            animationDuration: 2000,
+                            // animationDelayUpdate: function (idx) {
+                            //   return idx * 50 + 1000;
+                            // }
+                            barWidth: 60
+                        };
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+
+                    <div class="blog-thumb">
+                        <div class="text">
+                            <h5 class="title">从纵向比较来看，我国普通高中和初中的师生比显著下降</h5>
+                            <p>
+                                据教育部，中国每1名小学教师对应的学生从2005年的近20名下降到2019年的17名。超过56人的大班在小学占比为3.9%，初中为4.3%。城市中职在校生1576.5万人，长高中阶段在校生的40%，但教师数量仅有不到85万人，平均每名教师对应近19名学生，远高于普通高中1:13的师生比两会期间，全国政协常委兼副秘书长、民进中央副主席朱永新建议，适当增加教师编制，加强教师培训。建议调整中小学教师编制标准，提高中小学师生比，适当增加教师编制总量。同时，针对“双减”政策对教师提出的新要求，对在职教师开展针对性的培训。</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!-- Features Section End -->
+
+            <section id="about-us">
+                <div class="container">
+                    <div class="row d-lg-flex align-items-lg-center">
+                        <div data-aos="fade-right" data-aos-delay="500" class="col-md-6 col-sm-6">
+                            <div class="about-caption-3">
+                                <h3 class="title">Complete Data Reports <br> & Analysis history</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                                    enim ipsam</p>
+                                <a href="#" class="btn th-bg">Read More</a>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" class="col-md-6 col-sm-6">
+                            <div class="shadow-thumb">
+                                <figure><img src="static/picture/img1.svg" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section Start -->
+            <section id="公办">
+                <div class="container">
+                    <!-- Section Heading Start -->
+                    <div class="intro-section section-heading-2 mb-61">
+                        <h6 class="sub-title">Resources</h6>
+                        <h2 class="title">Happenings, headlines and insights. <br>See what's new at Grad.</h2>
+                    </div>
+                    <!-- Section Heading End -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#"> Trip to the road show Report about the team’s</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 16, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Team’s Report about the trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 14, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 hidden-sm">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Report about the team’s trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 12, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog Section End -->
+            <!-- Blog Section Start -->
+            <section id="公办学生">
+                <div class="container">
+                    <!-- Section Heading Start -->
+                    <div class="intro-section section-heading-2 mb-61">
+                        <h6 class="sub-title">Resources</h6>
+                        <h2 class="title">Happenings, headlines and insights. <br>See what's new at Grad.</h2>
+                    </div>
+                    <!-- Section Heading End -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#"> Trip to the road show Report about the team’s</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 16, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Team’s Report about the trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 14, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 hidden-sm">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Report about the team’s trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 12, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog Section End -->
+            <!-- Blog Section Start -->
+            <section id="民办">
+                <div class="container">
+                    <!-- Section Heading Start -->
+                    <div class="intro-section section-heading-2 mb-61">
+                        <h6 class="sub-title">Resources</h6>
+                        <h2 class="title">Happenings, headlines and insights. <br>See what's new at Grad.</h2>
+                    </div>
+                    <!-- Section Heading End -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#"> Trip to the road show Report about the team’s</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 16, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Team’s Report about the trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 14, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 hidden-sm">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Report about the team’s trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 12, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog Section End -->
+            <!-- Blog Section Start -->
+            <section id="民办学生">
+                <div class="container">
+                    <!-- Section Heading Start -->
+                    <div class="intro-section section-heading-2 mb-61">
+                        <h6 class="sub-title">Resources</h6>
+                        <h2 class="title">Happenings, headlines and insights. <br>See what's new at Grad.</h2>
+                    </div>
+                    <!-- Section Heading End -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#"> Trip to the road show Report about the team’s</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 16, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Team’s Report about the trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 14, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                        <div class="col-md-4 hidden-sm">
+                            <!-- /Blog Thumb Start -->
+                            <div class="blog-thumb">
+                                <div class="text">
+                                    <h5 class="title"><a href="#">Report about the team’s trip to the road show</a></h5>
+                                    <ul class="blog-meta">
+                                        <li class="post-date">
+                                            <time datetime="2018-07-16">July 12, 2018</time>
+                                        </li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <a href="#" class="readmore-btn th-cl">Read More </a>
+                                </div>
+                            </div>
+                            <!-- /Blog Thumb End -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog Section End -->
+        </div>
+        <!--/Main Contant End-->
+
+    </div>
+    <!-- /Main Wrapper End-->
+    <!-- jQuery -->
+    <script src="static/js/js-bundle.js"></script>
+    <!--Custom Script-->
+    <script src="static/js/custom.js"></script>
+</body>
+
+</html>
